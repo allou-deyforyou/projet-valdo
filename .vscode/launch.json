@@ -1,0 +1,48 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Dev",
+        "request": "launch",
+        "type": "dart",
+        "program": "todo/lib/main.dart",
+        "args": [
+            "--flavor", 
+            "dev",
+            "--dart-define-from-file", 
+            ".env/.env.dev",
+            "--target", 
+            "lib/main.dart",
+        ]
+      },
+      {
+        "name": "Stg",
+        "request": "launch",
+        "type": "dart",
+        "program": "todo/lib/main.dart",
+        "args": [
+            "--flavor", 
+            "stg",
+            "--dart-define-from-file", 
+            ".env/.env.stg",
+            "--target", 
+            "lib/main.dart",
+        ]
+      },
+      {
+        "name": "Prod",
+        "request": "launch",
+        "type": "dart",
+        "program": "todo/lib/main.dart",
+        "args": [
+            "--flavor", 
+            "prod",
+            "--dart-define-from-file", 
+            ".env/.env.prod",
+            "--target", 
+            "lib/main.dart",
+        ]
+      }
+    ],
+    "compounds": []
+}
