@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/services.dart';
-import 'package:todo/env.dart';
+import 'package:todo/core/environment/environment.dart';
 
 class AppModeBanner extends StatelessWidget {
   /// Creates a const debug mode banner.
@@ -17,7 +17,6 @@ class AppModeBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget result = child;
-    // TODO [Allou] J'ai modifié ici pour récuperer les données depuis .env
     if (Env.appBanner.isNotEmpty) {
       result = Banner(
         message: Env.appBanner,
@@ -34,7 +33,6 @@ class AppModeBanner extends StatelessWidget {
     super.debugFillProperties(properties);
     String message = 'disabled';
     assert(() {
-    // TODO [Allou] J'ai aussi modifié ici pour récuperer les données depuis .env
       message = '"${Env.appBanner}"';
       return true;
     }());
